@@ -1,7 +1,13 @@
 import numpy as np
+import timeit
 
-a = np.arange(100)
+a = np.arange(10000)
 
-b = np.arange(10)
+b = range(10000)
 
-print(a)
+t = timeit.Timer('x=(i for i in range(100))')
+ts = t.timeit()
+print(ts)
+
+
+
